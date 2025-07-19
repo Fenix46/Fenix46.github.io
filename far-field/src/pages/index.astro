@@ -1,0 +1,443 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_AUTHOR, SKILLS } from '../consts';
+---
+
+<!doctype html>
+<html lang="it">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<!-- Hero Section -->
+			<section class="hero">
+				<div class="hero-content">
+					<div class="hero-text">
+						<h1>Ciao, sono {SITE_AUTHOR} 👋</h1>
+						<p class="hero-subtitle">Full Stack Developer & Tech Enthusiast</p>
+						<p class="hero-description">
+							Passionato di tecnologia e sviluppo software. Mi piace creare soluzioni innovative 
+							e condividere le mie esperienze attraverso il blog. Specializzato in React, Node.js 
+							e architetture cloud-native.
+						</p>
+						<div class="hero-actions">
+							<a href="/projects" class="btn btn-primary">Vedi i Progetti</a>
+							<a href="/blog" class="btn btn-secondary">Leggi il Blog</a>
+						</div>
+					</div>
+					<div class="hero-image">
+						<div class="avatar-placeholder">
+							<span>ES</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Skills Section -->
+			<section class="skills-section">
+				<h2>Competenze Tecniche</h2>
+				<div class="skills-grid">
+					<div class="skill-category">
+						<h3>Frontend</h3>
+						<div class="skill-tags">
+							{SKILLS.frontend.map(skill => <span class="skill-tag">{skill}</span>)}
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>Backend</h3>
+						<div class="skill-tags">
+							{SKILLS.backend.map(skill => <span class="skill-tag">{skill}</span>)}
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>DevOps</h3>
+						<div class="skill-tags">
+							{SKILLS.devops.map(skill => <span class="skill-tag">{skill}</span>)}
+						</div>
+					</div>
+					<div class="skill-category">
+						<h3>Tools</h3>
+						<div class="skill-tags">
+							{SKILLS.tools.map(skill => <span class="skill-tag">{skill}</span>)}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Featured Projects -->
+			<section class="projects-section">
+				<h2>Progetti in Evidenza</h2>
+				<div class="projects-grid">
+					<article class="project-card">
+						<div class="project-image">
+							<div class="project-placeholder">🤖</div>
+						</div>
+						<div class="project-content">
+							<h3>PolyAgents</h3>
+							<p>Sistema multi agente (cloud) con consenso semantico (con agente locale)</p>
+							<div class="project-tech">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">PostgreSQL</span>
+								<span class="tech-tag">React</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/Fenix46/polyagents" class="project-link">GitHub</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-image">
+							<div class="project-placeholder">⚡</div>
+						</div>
+						<div class="project-content">
+							<h3>VibeCli</h3>
+							<p>Agente di sviluppo codice direttamente da CLI</p>
+							<div class="project-tech">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">CLI</span>
+								<span class="tech-tag">AI</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/Fenix46/vibecli" class="project-link">GitHub</a>
+							</div>
+						</div>
+					</article>
+
+					<article class="project-card">
+						<div class="project-image">
+							<div class="project-placeholder">📱</div>
+						</div>
+						<div class="project-content">
+							<h3>LuckyKernel</h3>
+							<p>Sviluppo kernel android device: samsung galaxy nexus</p>
+							<div class="project-tech">
+								<span class="tech-tag">C</span>
+								<span class="tech-tag">Linux</span>
+								<span class="tech-tag">Android</span>
+							</div>
+							<div class="project-links">
+								<a href="https://github.com/Fenix46/luckykernel" class="project-link">GitHub</a>
+							</div>
+						</div>
+					</article>
+				</div>
+				<div class="projects-cta">
+					<a href="/projects" class="btn btn-outline">Vedi Tutti i Progetti</a>
+				</div>
+			</section>
+
+			<!-- Latest Blog Posts -->
+			<section class="blog-section">
+				<h2>Ultimi Articoli</h2>
+				<div class="blog-preview">
+					<p>Scrivo articoli tecnici su React, Node.js, architetture software e best practices.</p>
+					<a href="/blog" class="btn btn-outline">Leggi il Blog</a>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	/* Hero Section */
+	.hero {
+		padding: 4rem 0;
+		margin-bottom: 4rem;
+	}
+	
+	.hero-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 3rem;
+		align-items: center;
+	}
+	
+	.hero h1 {
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+	
+	.hero-subtitle {
+		font-size: 1.5rem;
+		color: rgb(var(--gray));
+		margin-bottom: 1.5rem;
+		font-weight: 500;
+	}
+	
+	.hero-description {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin-bottom: 2rem;
+		color: rgb(var(--gray-dark));
+	}
+	
+	.hero-actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+	
+	.hero-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.avatar-placeholder {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 4rem;
+		font-weight: bold;
+		color: white;
+		box-shadow: var(--box-shadow);
+	}
+	
+	/* Buttons */
+	.btn {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		border-radius: 8px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+	}
+	
+	.btn-primary {
+		background: var(--accent);
+		color: white;
+	}
+	
+	.btn-primary:hover {
+		background: var(--accent-dark);
+		transform: translateY(-2px);
+	}
+	
+	.btn-secondary {
+		background: transparent;
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+	
+	.btn-secondary:hover {
+		background: var(--accent);
+		color: white;
+		transform: translateY(-2px);
+	}
+	
+	.btn-outline {
+		background: transparent;
+		color: rgb(var(--gray-dark));
+		border-color: rgb(var(--gray));
+	}
+	
+	.btn-outline:hover {
+		background: rgb(var(--gray));
+		color: white;
+	}
+	
+	/* Skills Section */
+	.skills-section {
+		margin-bottom: 4rem;
+	}
+	
+	.skills-section h2 {
+		text-align: center;
+		margin-bottom: 3rem;
+		font-size: 2.5rem;
+	}
+	
+	.skills-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+	}
+	
+	.skill-category {
+		background: white;
+		padding: 2rem;
+		border-radius: 12px;
+		box-shadow: var(--box-shadow);
+		border: 1px solid rgb(var(--gray-light));
+	}
+	
+	.skill-category h3 {
+		margin-bottom: 1rem;
+		color: var(--accent);
+		font-size: 1.3rem;
+	}
+	
+	.skill-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	
+	.skill-tag {
+		background: rgb(var(--gray-light));
+		color: rgb(var(--gray-dark));
+		padding: 0.4rem 0.8rem;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
+	}
+	
+	/* Projects Section */
+	.projects-section {
+		margin-bottom: 4rem;
+	}
+	
+	.projects-section h2 {
+		text-align: center;
+		margin-bottom: 3rem;
+		font-size: 2.5rem;
+	}
+	
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+	
+	.project-card {
+		background: white;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: var(--box-shadow);
+		border: 1px solid rgb(var(--gray-light));
+		transition: transform 0.3s ease;
+	}
+	
+	.project-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.project-image {
+		height: 200px;
+		background: linear-gradient(135deg, rgb(var(--gray-light)), white);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.project-placeholder {
+		font-size: 4rem;
+	}
+	
+	.project-content {
+		padding: 1.5rem;
+	}
+	
+	.project-content h3 {
+		margin-bottom: 0.5rem;
+		color: rgb(var(--black));
+	}
+	
+	.project-content p {
+		color: rgb(var(--gray));
+		margin-bottom: 1rem;
+		line-height: 1.6;
+	}
+	
+	.project-tech {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-bottom: 1rem;
+	}
+	
+	.tech-tag {
+		background: var(--accent);
+		color: white;
+		padding: 0.3rem 0.6rem;
+		border-radius: 15px;
+		font-size: 0.8rem;
+		font-weight: 500;
+	}
+	
+	.project-links {
+		display: flex;
+		gap: 1rem;
+	}
+	
+	.project-link {
+		color: var(--accent);
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 0.9rem;
+	}
+	
+	.project-link:hover {
+		text-decoration: underline;
+	}
+	
+	.projects-cta {
+		text-align: center;
+	}
+	
+	/* Blog Section */
+	.blog-section {
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+	
+	.blog-section h2 {
+		margin-bottom: 1rem;
+		font-size: 2.5rem;
+	}
+	
+	.blog-preview p {
+		font-size: 1.1rem;
+		color: rgb(var(--gray));
+		margin-bottom: 2rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* Responsive */
+	@media (max-width: 768px) {
+		.hero-content {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+		
+		.hero h1 {
+			font-size: 2.5rem;
+		}
+		
+		.hero-actions {
+			justify-content: center;
+		}
+		
+		.avatar-placeholder {
+			width: 150px;
+			height: 150px;
+			font-size: 3rem;
+		}
+		
+		.projects-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.skills-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
