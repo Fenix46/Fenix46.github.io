@@ -15,7 +15,7 @@ export const SOCIAL_LINKS = {
 // Skills categories
 export const SKILLS = {
 	frontend: ['React', 'TypeScript', 'JavaScript', 'HTML/CSS', 'Tailwind CSS'],
-	backend: ['Node.js', 'Python', 'Java', 'PostgreSQL', 'MongoDB', 'Redis'],
+	backend: ['Node.js', 'Python', 'PHP', 'PostgreSQL', 'MongoDB', 'Redis'],
 	devops: ['Docker', 'Git', 'Linux'],
 	tools: ['VS Code', 'Cursor', 'Windsurd'],
 };
