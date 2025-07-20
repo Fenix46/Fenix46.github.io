@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<article class="project">
+    <div class="container">
+        <header class="project__header">
+            <h1 class="project__title">{{ page.title }}</h1>
+            <p class="project__description">{{ page.description }}</p>
+            
+            {% if page.image %}
+            <div class="project__image">
+                <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+            </div>
+            {% endif %}
+        </header>
+
+        <div class="project__content">
+            {{ content }}
+        </div>
+
+        {% if page.tech or page.github or page.demo %}
+        <footer class="project__footer">
+            {% if page.tech %}
+            <div class="project__tech">
+                <h3>Tecnologie utilizzate:</h3>
+                <div class="tech-tags">
+                    {% for tech in page.tech %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <div class="project__links">
+                {% if page.github %}
+                <a href="{{ page.github }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                {% endif %}
+                
+                {% if page.demo %}
+                <a href="{{ page.demo }}" class="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+                {% endif %}
+            </div>
+        </footer>
+        {% endif %}
+    </div>
+</article> 

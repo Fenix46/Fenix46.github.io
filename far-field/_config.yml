@@ -1,0 +1,93 @@
+# Site settings
+title: Emanuele Scarlata
+description: Tech Enthusiast, Hobby's Developer
+email: scarlataemanuele@gmail.com
+url: "https://fenix46.github.io"
+baseurl: "/Fenix46.github.io"
+
+# Author
+author:
+  name: Emanuele Scarlata
+  bio: Tech Enthusiast, Hobby's Developer
+  location: Italy
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/Fenix46"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/emanuele-scarlata-b23300132/"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Social media
+social_media:
+  - name: GitHub
+    url: https://github.com/Fenix46
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/emanuele-scarlata-b23300132/
+
+# Skills
+skills:
+  frontend:
+    - React
+    - TypeScript
+    - JavaScript
+    - HTML/CSS
+    - Tailwind CSS
+  backend:
+    - Node.js
+    - Python
+    - Java
+    - PostgreSQL
+    - MongoDB
+    - Redis
+  devops:
+    - Docker
+    - Git
+    - Linux
+  tools:
+    - VS Code
+    - Cursor
+    - Windsurd 

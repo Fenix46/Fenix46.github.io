@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    
+    <!-- SEO -->
+    {% seo %}
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="{{ '/' | relative_url }}" class="nav__logo">
+                {{ site.title }}
+            </a>
+            
+            <div class="nav__menu">
+                <a href="{{ '/' | relative_url }}" class="nav__link">Home</a>
+                <a href="{{ '/projects/' | relative_url }}" class="nav__link">Progetti</a>
+                <a href="{{ '/blog/' | relative_url }}" class="nav__link">Blog</a>
+                <a href="{{ '/about/' | relative_url }}" class="nav__link">Chi Sono</a>
+                <a href="{{ '/contact/' | relative_url }}" class="nav__link">Contatti</a>
+            </div>
+            
+            <div class="nav__social">
+                {% for link in site.author.links %}
+                <a href="{{ link.url }}" class="nav__social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="{{ link.icon }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. Tutti i diritti riservati.</p>
+                    <p>Costruito con ❤️ usando <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a></p>
+                </div>
+                
+                <div class="footer__social">
+                    {% for social in site.social_media %}
+                    <a href="{{ social.url }}" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-{{ social.name | downcase }}"></i>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html> 
