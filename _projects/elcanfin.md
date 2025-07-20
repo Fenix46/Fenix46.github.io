@@ -1,145 +1,109 @@
 ---
 layout: project
 title: ElCanfin
-description: Piattaforma di gestione finanziaria personale
-emoji: 💰
+description: Sito web per gruppo folkloristico locale
+emoji: 🎭
 featured: false
 tech:
-  - React
-  - Node.js
-  - TypeScript
-  - MongoDB
-  - Express
-  - Chart.js
-github: https://github.com/Fenix46/ElCanfin
-demo: https://elcanfin.vercel.app
-category: Web App
-status: legacy
+  - PHP
+  - HTML/CSS
+  - JavaScript
+  - MySQL
+demo: https://elcanfin.it
+category: Web Development
+status: active
 ---
 
 ## Panoramica
 
-ElCanfin è una piattaforma web per la gestione finanziaria personale che permette agli utenti di tracciare spese, entrate e investimenti. Offre dashboard interattive, analisi dettagliate e strumenti per il budgeting.
+ElCanfin è un sito web commissionato per un gruppo folkloristico locale. Il progetto è stato sviluppato su richiesta del cliente per presentare le attività del gruppo, eventi, galleria fotografica e informazioni di contatto.
 
 ## Caratteristiche Principali
 
-- **Dashboard Interattiva**: Visualizzazione grafica delle finanze personali
-- **Tracking Spese**: Categorizzazione automatica delle transazioni
-- **Budget Planning**: Pianificazione e monitoraggio del budget
-- **Analisi Trend**: Grafici e statistiche temporali
-- **Multi-Currency**: Supporto per diverse valute
-- **Export Data**: Esportazione dati in formato CSV/PDF
+- **Presentazione Gruppo**: Informazioni sul gruppo folkloristico
+- **Galleria Eventi**: Raccolta fotografica degli eventi
+- **Calendario Eventi**: Programma delle attività
+- **Contatti**: Informazioni per raggiungere il gruppo
+- **Responsive Design**: Ottimizzato per tutti i dispositivi
 
 ## Tecnologie Utilizzate
 
 ### Frontend
-- **React**: Framework per l'interfaccia utente
-- **TypeScript**: Tipizzazione statica
-- **Chart.js**: Grafici e visualizzazioni
-- **Tailwind CSS**: Styling moderno
-- **React Query**: Gestione stato server
+- **HTML5**: Struttura semantica
+- **CSS3**: Styling e layout responsive
+- **JavaScript**: Interattività client-side
 
 ### Backend
-- **Node.js**: Runtime JavaScript
-- **Express**: Framework web
-- **MongoDB**: Database NoSQL
-- **JWT**: Autenticazione
-- **Multer**: Upload file
+- **PHP**: Linguaggio server-side
+- **MySQL**: Database relazionale
+- **Apache**: Server web
 
-### DevOps
-- **Vercel**: Hosting frontend
-- **Railway**: Hosting backend
-- **GitHub Actions**: CI/CD
+### Hosting
+- **Shared Hosting**: Hosting tradizionale
+- **Domain**: elcanfin.it
 
 ## Funzionalità Principali
 
-### Gestione Transazioni
-- Aggiunta manuale di spese e entrate
-- Importazione automatica da file CSV
-- Categorizzazione intelligente
-- Tag personalizzabili
+### Presentazione Gruppo
+- Storia e missione del gruppo folkloristico
+- Membri e ruoli
+- Tradizioni e costumi locali
 
-### Dashboard Analytics
-- Grafici a torta per categorie
-- Trend temporali mensili/annui
-- Confronto budget vs spese effettive
-- Indicatori di performance finanziaria
+### Gestione Contenuti
+- Galleria fotografica eventi
+- Calendario eventi e spettacoli
+- News e aggiornamenti
+- Sezione contatti
 
-### Budget Management
-- Creazione budget per categoria
-- Alert quando si superano i limiti
-- Pianificazione obiettivi finanziari
-- Tracking progress
+## Sviluppo del Progetto
 
-## Architettura
+### Approccio
+- **Client Commission**: Progetto sviluppato su richiesta del cliente
+- **Requirements Analysis**: Analisi delle esigenze del gruppo folkloristico
+- **Design & Development**: Sviluppo personalizzato per le specifiche richieste
+- **Deployment**: Pubblicazione su hosting tradizionale
 
-### Frontend Structure
-```
-src/
-├── components/       # Componenti React
-├── pages/           # Pagine dell'app
-├── hooks/           # Custom hooks
-├── services/        # API calls
-├── utils/           # Utility functions
-└── types/           # TypeScript types
-```
-
-### Backend Structure
-```
-src/
-├── controllers/     # Route handlers
-├── models/          # MongoDB schemas
-├── middleware/      # Custom middleware
-├── routes/          # API routes
-├── services/        # Business logic
-└── utils/           # Utility functions
-```
+### Caratteristiche Tecniche
+- **PHP Native**: Sviluppo senza framework
+- **Database MySQL**: Gestione contenuti dinamici
+- **Responsive Design**: Ottimizzazione mobile-first
+- **SEO Friendly**: Ottimizzazione per motori di ricerca
 
 ## Sfide e Soluzioni
 
-### Sicurezza Dati
-- **Encryption**: Crittografia dati sensibili
-- **Authentication**: JWT con refresh tokens
-- **Authorization**: Controllo accessi per utente
-- **Data Validation**: Validazione input lato server
+### Requisiti Cliente
+- **Content Management**: Sistema di gestione contenuti semplice
+- **Photo Gallery**: Ottimizzazione immagini per web
+- **Event Calendar**: Gestione calendario eventi
+- **Contact Integration**: Integrazione informazioni contatti
 
 ### Performance
-- **Caching**: Redis per dati frequenti
-- **Pagination**: Caricamento dati progressivo
-- **Optimization**: Lazy loading componenti
-- **CDN**: Distribuzione asset statici
-
-### User Experience
-- **Responsive Design**: Ottimizzazione mobile
-- **Offline Support**: PWA capabilities
-- **Real-time Updates**: WebSocket per aggiornamenti
-- **Accessibility**: Supporto screen readers
+- **Image Optimization**: Compressione e resize automatico
+- **Mobile Responsive**: Design adattivo per tutti i dispositivi
+- **Fast Loading**: Ottimizzazione tempi di caricamento
+- **SEO Optimization**: Meta tags e struttura semantica
 
 ## Risultati
 
-- **Utenti Attivi**: 1000+ utenti registrati
-- **Transazioni**: 50,000+ transazioni gestite
-- **Performance**: 95% Lighthouse score
-- **Satisfaction**: 4.7/5 rating utenti
+- **Sito Online**: elcanfin.it attivo e funzionante
+- **Client Satisfaction**: Progetto completato secondo specifiche
+- **Performance**: Sito veloce e responsive
+- **Maintenance**: Supporto continuo per aggiornamenti
 
 ## Lezioni Apprese
 
-### Sviluppo
-- Importanza della validazione dati
-- Necessità di testing end-to-end
-- Benefici del TypeScript per progetti complessi
-- Valore della documentazione API
+### Sviluppo Client
+- Importanza dell'analisi dei requisiti
+- Necessità di comunicazione costante con il cliente
+- Valore della semplicità nell'interfaccia utente
+- Importanza della manutenibilità del codice
 
 ### Business
-- Feedback utenti cruciale per miglioramenti
-- Necessità di onboarding intuitivo
-- Importanza della privacy dati
-- Scalabilità architettura database
+- Gestione delle aspettative del cliente
+- Necessità di documentazione chiara
+- Importanza del supporto post-lancio
+- Valore della flessibilità nelle modifiche
 
-## Prossimi Sviluppi
+## Stato Attuale
 
-- Integrazione con banche (Open Banking)
-- App mobile nativa
-- AI per categorizzazione automatica
-- Social features per confronti
-- Integrazione con broker per investimenti 
+Il sito è attualmente online e funzionante su elcanfin.it. Il progetto è completato e viene mantenuto con aggiornamenti periodici su richiesta del cliente. 

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: PolyAgents
-description: Sistema multi-agente per l'automazione di processi complessi
+description: Sistema multi-agente AI con consenso semantico locale
 emoji: 🤖
 featured: true
 tech:
@@ -10,73 +10,78 @@ tech:
   - TypeScript
   - PostgreSQL
   - Redis
+  - Qdrant
   - Docker
-github: https://github.com/Fenix46/PolyAgents
-demo: https://polyagents-demo.vercel.app
 category: AI/ML
 status: active
 ---
 
 ## Panoramica
 
-PolyAgents è un sistema multi-agente innovativo che utilizza l'intelligenza artificiale per automatizzare processi complessi. Il progetto combina agenti specializzati che collaborano per risolvere problemi complessi in modo distribuito.
+PolyAgents è un sistema multi-agente AI che prende il prompt dell'utente e lo elabora attraverso 3 agenti cloud (Gemini) che analizzano e ragionano tra loro. Una IA locale (Qwen2-0.6B) prende queste risposte, le fonde e crea un consenso semantico, riassumendo e fornendo una risposta unica e coerente.
 
 ## Caratteristiche Principali
 
-- **Architettura Multi-Agente**: Sistema distribuito di agenti specializzati
-- **Comunicazione Asincrona**: Utilizzo di Redis per la comunicazione tra agenti
-- **Interfaccia Web**: Dashboard React per monitorare e controllare gli agenti
-- **Persistenza Dati**: Database PostgreSQL per lo storage delle informazioni
-- **Containerizzazione**: Deployment con Docker per facilità di distribuzione
+- **Multi-Agent Cloud**: 3 agenti Gemini che analizzano e ragionano
+- **Consenso Semantico**: IA locale Qwen2-0.6B per fusione risposte
+- **Interfaccia Web**: Dashboard React per interazione utente
+- **Vector Database**: Qdrant per gestione embeddings
+- **Containerizzazione**: Deployment Docker per facilità di distribuzione
 
 ## Tecnologie Utilizzate
 
 ### Backend
 - **Python**: Linguaggio principale per gli agenti
+- **Uvicorn**: Server ASGI per FastAPI
+- **FastAPI**: API REST per l'interfaccia web
 - **PostgreSQL**: Database relazionale per la persistenza
 - **Redis**: Cache e comunicazione tra agenti
-- **FastAPI**: API REST per l'interfaccia web
+- **Qdrant**: Vector database per embeddings
 
 ### Frontend
 - **React**: Framework per l'interfaccia utente
 - **TypeScript**: Tipizzazione statica per maggiore robustezza
-- **Tailwind CSS**: Styling moderno e responsive
+- **Vite**: Build tool e development server
+
+### AI/ML
+- **Gemini API**: Agenti cloud per analisi
+- **Qwen2-0.6B**: IA locale per consenso semantico
+- **Vector Embeddings**: Gestione semantica delle risposte
 
 ### DevOps
 - **Docker**: Containerizzazione dell'applicazione
-- **GitHub Actions**: CI/CD pipeline
 
 ## Architettura del Sistema
 
-Il sistema è composto da diversi tipi di agenti:
+Il sistema è composto da diversi componenti:
 
-1. **Agente Coordinatore**: Gestisce la distribuzione dei task
-2. **Agenti Specializzati**: Esperti in domini specifici
-3. **Agente di Monitoraggio**: Traccia le performance del sistema
-4. **Agente di Persistenza**: Gestisce il salvataggio dei dati
+1. **Agenti Cloud (Gemini)**: 3 agenti che analizzano il prompt e ragionano tra loro
+2. **IA Locale (Qwen2-0.6B)**: Prende le risposte degli agenti e crea un consenso semantico
+3. **Vector Database (Qdrant)**: Gestisce gli embeddings per la semantica
+4. **API Gateway**: Coordina la comunicazione tra tutti i componenti
 
 ## Sfide e Soluzioni
 
-### Gestione della Concorrenza
-- Implementazione di code di messaggi con Redis
-- Sincronizzazione tramite lock distribuiti
-- Gestione degli stati degli agenti
+### Consenso Semantico
+- Fusione di risposte multiple in una risposta coerente
+- Gestione di contraddizioni tra agenti
+- Ottimizzazione della qualità della risposta finale
 
-### Scalabilità
-- Architettura modulare per aggiungere nuovi agenti
-- Load balancing automatico
-- Monitoraggio delle performance in tempo reale
+### Performance
+- Gestione efficiente delle chiamate API cloud
+- Ottimizzazione dell'IA locale per velocità
+- Caching intelligente delle risposte
 
 ## Risultati
 
-- **Automazione Completa**: Riduzione del 80% del lavoro manuale
-- **Scalabilità**: Supporto per centinaia di agenti simultanei
-- **Affidabilità**: 99.9% di uptime in produzione
-- **Flessibilità**: Facile aggiunta di nuovi tipi di agenti
+- **Qualità Risposte**: Miglioramento significativo grazie al consenso semantico
+- **Efficienza**: Riduzione del tempo di elaborazione
+- **Affidabilità**: Sistema robusto con fallback su IA locale
+- **Flessibilità**: Architettura modulare per nuovi agenti
 
 ## Prossimi Sviluppi
 
-- Integrazione con modelli di linguaggio avanzati
-- Supporto per agenti mobili (edge computing)
-- Interfaccia di programmazione visuale per gli agenti
-- Analytics avanzati per l'ottimizzazione delle performance 
+- Integrazione con altri modelli AI cloud
+- Ottimizzazione dell'IA locale per performance
+- Interfaccia avanzata per configurazione agenti
+- Analytics per monitoraggio qualità risposte 

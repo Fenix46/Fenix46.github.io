@@ -32,6 +32,7 @@ title: Progetti
                     <option value="all">Tutti gli stati</option>
                     <option value="active">Attivo</option>
                     <option value="legacy">Legacy</option>
+                    <option value="coming-soon">Coming Soon</option>
                 </select>
             </div>
         </div>
@@ -50,6 +51,9 @@ title: Progetti
                         {% endif %}
                         {% if project.status == 'legacy' %}
                         <span class="badge badge--legacy">📚 Legacy</span>
+                        {% endif %}
+                        {% if project.status == 'coming-soon' %}
+                        <span class="badge badge--coming-soon">🚧 Coming Soon</span>
                         {% endif %}
                         {% if project.github %}
                         <span class="badge badge--opensource">🔓 Open Source</span>
