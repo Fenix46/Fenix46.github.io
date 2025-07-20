@@ -1,6 +1,6 @@
 # Portfolio di Emanuele Scarlata
 
-Portfolio personale e blog tecnico costruito con [Astro](https://astro.build).
+Portfolio personale e blog tecnico costruito con [Astro](https://astro.build) e deployato su GitHub Pages.
 
 ## 🚀 Caratteristiche
 
@@ -100,13 +100,30 @@ tags: ["react", "javascript"]
 
 ## 🚀 Deployment
 
-Il sito viene deployato automaticamente su GitHub Pages quando si fa push sul branch `main`.
-
 ### Configurazione GitHub Pages
+
+**IMPORTANTE**: Questo sito usa Astro, NON Jekyll!
 
 1. Vai nelle impostazioni del repository
 2. Sezione "Pages"
-3. Source: "GitHub Actions"
+3. **Source**: "GitHub Actions" (NON "Deploy from a branch")
+4. Salva le modifiche
+
+### Workflow GitHub Actions
+
+Il sito viene deployato automaticamente tramite GitHub Actions quando si fa push sul branch `main`. Il workflow:
+
+1. Installa Node.js 18
+2. Installa le dipendenze npm
+3. Builda il sito Astro
+4. Deploya su GitHub Pages
+
+### Troubleshooting
+
+Se vedi errori Jekyll:
+- Assicurati che GitHub Pages sia configurato per usare "GitHub Actions"
+- Verifica che il file `.nojekyll` sia presente in `public/`
+- Controlla che le permissions di GitHub Actions siano corrette
 
 ## 📊 Performance
 
@@ -125,4 +142,4 @@ MIT License - vedi il file [LICENSE](LICENSE) per i dettagli.
 
 ---
 
-Costruito con ❤️ usando [Astro](https://astro.build)
+Costruito con ❤️ usando [Astro](https://astro.build) e deployato su [GitHub Pages](https://pages.github.com/)

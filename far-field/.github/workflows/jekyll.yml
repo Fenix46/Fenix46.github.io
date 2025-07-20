@@ -1,0 +1,17 @@
+# Questo file sovrascrive il workflow Jekyll di default di GitHub Pages
+# Il vero deployment è gestito da deploy.yml
+name: Disable Jekyll
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # Job vuoto per disabilitare Jekyll
+  disable-jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disable Jekyll
+        run: echo "Jekyll disabled - using Astro instead" 

@@ -1,0 +1,3 @@
+# Forza GitHub Pages a non usare Jekyll
+*.md linguist-documentation
+*.astro linguist-documentation 

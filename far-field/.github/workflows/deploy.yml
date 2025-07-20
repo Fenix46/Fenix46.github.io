@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro Site to GitHub Pages
 
 on:
   push:
@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      astro-version: ${{ steps.astro-version.outputs.version }}
 
     steps:
     - name: Checkout
@@ -29,16 +31,20 @@ jobs:
         node-version: '18'
         cache: 'npm'
 
+    - name: Get Astro version
+      id: astro-version
+      run: npm list astro
+
     - name: Install dependencies
       run: npm ci
 
-    - name: Build
+    - name: Build Astro site
       run: npm run build
 
     - name: Setup Pages
       uses: actions/configure-pages@v4
 
-    - name: Upload artifact
+    - name: Upload Astro build
       uses: actions/upload-pages-artifact@v3
       with:
         path: './dist'
