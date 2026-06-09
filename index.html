@@ -53,7 +53,7 @@ title: Home
     <div class="container">
         <h2 class="section__title">Progetti in Evidenza</h2>
         <div class="projects__grid">
-            {% assign featured_projects = site.projects | where: "featured", true | limit: 3 %}
+            {% assign featured_projects = site.projects | where: "featured", true | limit: 4 %}
             {% for project in featured_projects %}
             <article class="project-card">
                 <div class="project-card__image">

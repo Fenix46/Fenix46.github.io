@@ -23,6 +23,9 @@ title: Progetti
                     <option value="CLI/Tools">CLI/Tools</option>
                     <option value="Systems">Systems</option>
                     <option value="Web App">Web App</option>
+                    <option value="Mobile App">Mobile App</option>
+                    <option value="Mobile Development">Mobile Development</option>
+                    <option value="Web Development">Web Development</option>
                 </select>
             </div>
             
